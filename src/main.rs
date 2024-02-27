@@ -2,9 +2,9 @@ use listenbrainz::raw::Client;
 use listenbrainz::raw::response::{UserListensListen, UserListensResponse};
 use derive_builder::Builder;
 
-pub struct Recording {
-    mbid: String
-}
+//pub mod fetcher;
+pub mod unlinked;
+
 #[derive(Clone, Debug, Builder)]
 //#[cfg_attr(feature = "builders", derive(Builder))]
 pub struct ListenReader {
@@ -44,7 +44,7 @@ pub struct ListenCollection {
 impl ListenCollection {
     pub fn get_listens_with_recording_id<'a>(&'a self, record_id: &str) -> impl Iterator<Item=&UserListensListen> + 'a {
         self.listens.iter().filter(|listen| listen.recording_msid == record_id)
-    } 
+    }
 }
 
 fn main() {

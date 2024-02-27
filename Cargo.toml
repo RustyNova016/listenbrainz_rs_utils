@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 derive_builder = "0.20.0"
 listenbrainz = "0.7.0"
+musicbrainz_rs = { version = "0.5.0", features = ["blocking"] }
 #derive_builder = {version = "0.20.0", optional = true}
 
 [features]
