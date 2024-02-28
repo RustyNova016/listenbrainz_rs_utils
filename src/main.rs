@@ -3,7 +3,10 @@ use listenbrainz::raw::response::{UserListensListen, UserListensResponse};
 use derive_builder::Builder;
 
 //pub mod fetcher;
-pub mod unlinked;
+pub mod underrated_tracks;
+//pub mod mbid_searcher;
+//pub mod database;
+//pub mod underated_release_groups;
 
 #[derive(Clone, Debug, Builder)]
 //#[cfg_attr(feature = "builders", derive(Builder))]
@@ -42,9 +45,9 @@ pub struct ListenCollection {
 }
 
 impl ListenCollection {
-    pub fn get_listens_with_recording_id<'a>(&'a self, record_id: &str) -> impl Iterator<Item=&UserListensListen> + 'a {
-        self.listens.iter().filter(|listen| listen.recording_msid == record_id)
-    }
+    //pub fn get_listens_with_recording_id<'a>(&'a self, record_id: &str) -> impl Iterator<Item=&UserListensListen> + 'a {
+    //    self.listens.iter().filter(|listen| listen.recording_msid == record_id)
+    //}
 }
 
 fn main() {
