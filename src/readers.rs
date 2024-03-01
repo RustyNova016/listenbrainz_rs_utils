@@ -1,6 +1,10 @@
 use listenbrainz::raw::{response::UserListensResponse, Client};
 
+#[cfg(feature = "builders")]
+use derive_builder::Builder;
+
 #[derive(Clone, Debug, PartialEq, Eq)]
+#[allow(missing_docs)]
 #[cfg_attr(feature = "builders", derive(Builder))]
 /// Reader for the the User Listens endpoint
 pub struct ListenReader {
