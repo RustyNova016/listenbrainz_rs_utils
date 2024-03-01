@@ -488,9 +488,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "2.2.4"
+version = "2.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "967d6dd42f16dbf0eb8040cb9e477933562684d3918f7d253f2ff9087fb3e7a3"
+checksum = "7b0b929d511467233429c45a44ac1dcaa21ba0f5ba11e4879e6ed28ddb4f9df4"
 dependencies = [
  "equivalent",
  "hashbrown",
@@ -538,7 +538,7 @@ checksum = "01cda141df6706de531b6c46c3a33ecca755538219bd484262fa09410c13539c"
 [[package]]
 name = "listenbrainz"
 version = "0.7.0"
-source = "git+https://github.com/RustyNova016/listenbrainz-rs.git?branch=main#30f02a77097401dc211b7b1e25857713a68f12b0"
+source = "git+https://github.com/RustyNova016/listenbrainz-rs.git?branch=main#9392a714c1c3212ad103595096aa37b97b2d039d"
 dependencies = [
  "attohttpc",
  "serde",
