@@ -40,7 +40,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust: [stable, beta, nightly, 1.64.0]
         features: ["--no-default-features", "--all-features"]
     steps:
       - uses: actions/checkout@v3
