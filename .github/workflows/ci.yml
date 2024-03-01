@@ -25,12 +25,12 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
-          args: --no-run
+          args: --no-run --all-features
 
       - name: Run tests
         uses: actions-rs/cargo@v1
         with:
-          command: test
+          command: test --all-features
 
 
   clippy:
@@ -50,7 +50,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: --all-features -- -D warnings 
 
   docs:
     runs-on: ubuntu-latest
@@ -70,7 +70,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: doc
-          args: --no-deps --document-private-items
+          args: --no-deps --document-private-items --all-features
 
   fmt:
     runs-on: ubuntu-latest
