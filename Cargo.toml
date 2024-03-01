@@ -1,5 +1,5 @@
 [package]
-name = "listenbrainz-utils"
+name = "listenbrainz-rs-utils"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,5 +12,6 @@ listenbrainz = { version = "0.7.0", git = "https://github.com/RustyNova016/liste
 musicbrainz_rs = { version = "0.5.0", features = ["blocking"], default-features = false }
 
 [features]
+default = ["builders"]
 # Generate builders for some structs
 builders = ["dep:derive_builder"]
