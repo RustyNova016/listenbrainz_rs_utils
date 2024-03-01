@@ -14,6 +14,7 @@
 
 /// This module contains readers for the APIs endpoint. Those allow for easier iterating over pages
 pub mod readers;
+mod traits;
 
 // Re-exports
 pub use listenbrainz;
