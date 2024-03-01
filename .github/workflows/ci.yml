@@ -12,6 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         rust: [stable, beta, nightly, 1.64.0]
+        features: ["--no-default-features", "--all-features"]
+
     steps:
       - uses: actions/checkout@v3
 
@@ -25,12 +27,12 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
-          args: --no-run --all-features
+          args: --no-run ${{ matrix.features }}
 
       - name: Run tests
         uses: actions-rs/cargo@v1
         with:
-          command: test --all-features
+          command: test ${{ matrix.features }}
 
 
   clippy:
@@ -50,7 +52,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --all-features -- -D warnings 
+          args: ${{ matrix.features }} -- -D warnings 
 
   docs:
     runs-on: ubuntu-latest
