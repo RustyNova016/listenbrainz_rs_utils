@@ -547,7 +547,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "listenbrainz-rs-utils"
+name = "listenbrainz-utils"
 version = "0.1.0"
 dependencies = [
  "derive_builder",
