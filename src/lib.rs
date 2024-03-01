@@ -5,11 +5,8 @@
 //! ## Readers
 //! Readers allows easier handling of paginated APIs.
 
-#![warn(
-    missing_docs,
-)]
-
 #![deny(
+    missing_docs,
     missing_debug_implementations,
     unsafe_code,
     unstable_features
