@@ -8,15 +8,15 @@ use derive_builder::Builder;
 #[cfg_attr(feature = "builders", derive(Builder))]
 /// Reader for the the User Listens endpoint
 pub struct ListenReader {
-    #[cfg_attr(feature = "builders", builder(setter(into, strip_option)))]
+    #[cfg_attr(feature = "builders", builder(setter(into)))]
     /// The name of the target user
     user_name: String,
 
-    #[cfg_attr(feature = "builders", builder(setter(into, strip_option)))]
+    #[cfg_attr(feature = "builders", builder(setter(into, strip_option), default))]
     /// The UNIX timestamp of the earliest listen to retreive
     min_ts: Option<i64>,
 
-    #[cfg_attr(feature = "builders", builder(setter(into, strip_option)))]
+    #[cfg_attr(feature = "builders", builder(setter(into, strip_option), default))]
     /// The UNIX timestamp of the latest listen to retreive
     max_ts: Option<i64>,
 
