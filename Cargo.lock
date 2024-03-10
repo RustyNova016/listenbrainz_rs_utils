@@ -39,7 +39,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "184f5e6cce583a9db6b6f8d772a42cfce5b78e7c3ef26118cec3ce4c8c14969b"
 dependencies = [
  "flate2",
- "http 1.0.0",
+ "http 1.1.0",
  "log",
  "native-tls",
  "serde",
@@ -391,9 +391,9 @@ dependencies = [
 
 [[package]]
 name = "http"
-version = "1.0.0"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b32afd38673a8016f7c9ae69e5af41a58f81b1d31689040f2f1959594ce194ea"
+checksum = "21b9ddb458710bc376481b842f5da65cdf31522de232c1ca8146abce2a358258"
 dependencies = [
  "bytes",
  "fnv",
@@ -536,24 +536,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "01cda141df6706de531b6c46c3a33ecca755538219bd484262fa09410c13539c"
 
 [[package]]
-name = "listenbrainz"
-version = "0.7.0"
-source = "git+https://github.com/RustyNova016/listenbrainz-rs.git?branch=main#9392a714c1c3212ad103595096aa37b97b2d039d"
+name = "listenbrainz-utils"
+version = "0.1.0"
+dependencies = [
+ "derive_builder",
+ "dotenvy",
+ "listenbrainz_rs_nova",
+ "musicbrainz_rs",
+]
+
+[[package]]
+name = "listenbrainz_rs_nova"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1ad7db81cfb80d1e1f27509e9ca4cd4d0e80eb0abde996944f3a7e88e30c2143"
 dependencies = [
  "attohttpc",
  "serde",
  "serde_json",
  "thiserror",
-]
-
-[[package]]
-name = "listenbrainz-utils"
-version = "0.1.1"
-dependencies = [
- "derive_builder",
- "dotenvy",
- "listenbrainz",
- "musicbrainz_rs",
 ]
 
 [[package]]

@@ -6,7 +6,7 @@ use derive_builder::Builder;
 #[derive(Clone, Debug, PartialEq, Eq)]
 #[allow(missing_docs)]
 #[cfg_attr(feature = "builders", derive(Builder))]
-/// Reader for the the User Listens endpoint
+/// Reader for the User Listens endpoint
 pub struct ListenReader {
     #[cfg_attr(feature = "builders", builder(setter(into, strip_option)))]
     /// The name of the target user
